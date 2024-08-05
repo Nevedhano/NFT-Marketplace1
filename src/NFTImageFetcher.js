@@ -208,7 +208,7 @@ const NFTImageFetcher = () => {
                 return;
             }
              
-            const transaction1 = await nftContract.setApprovalForAll(marketPlaceContractAddress, true);
+            const transaction1 = await nftContract.approve(marketPlaceContractAddress, id);
             const receipt1 = await transaction1.wait();
 
             if(receipt1.status == 1) {
